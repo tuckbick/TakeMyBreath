@@ -6,6 +6,11 @@ $accent2: #910B0B;
 $accent3: #FF226B;
 
 
+$padding: 0 1%;
+$gutter_px: 0;
+$gutter_pc: 0%;
+
+
 
 /* Reusable column setup */
 
@@ -18,22 +23,20 @@ $accent3: #FF226B;
     -moz-background-clip:padding-box !important;
     -webkit-background-clip:padding-box !important;
     background-clip:padding-box !important;
-}
-
-.col {
-   @include col;
-}
-
-@mixin span($num, $gutter_pc, $gutter_px, $padding, $max_columns) {
-    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
-    width:($one_col * $num) + ($gutter_pc * ($num - 1));
     border-left-width:$gutter_px;
     padding:$padding;
     margin-left:$gutter_pc;
 }
 
-@mixin span_first {
-    margin-left:0;
+@mixin span($num, $gutter_pc, $gutter_px, $padding, $max_columns) {
+    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
+    width:($one_col * $num) + ($gutter_pc * ($num - 1));
+}
+
+
+
+.col {
+   @include col;
 }
  
 
@@ -49,49 +52,20 @@ $accent3: #FF226B;
     
 	@media screen and (min-width: 0px) and (max-width: 599px) {
         
-        .col {
-            margin-left:0%;
-            padding:0 1%;
-        }
-        
         /* --- Gridpak variables ---*/ 
         $max_columns: 4;
-        $padding: 0 1%;
-        $gutter_px: 0;
-        $gutter_pc: 0%;
-        
-
-        
-        .row .col:first-child {
-            @include span_first;
-        }
         
         
-        /*
-        Add your semantic classnames in alongside their corresponding spans here. e.g.
-        
-        .span_3,
-        .my_semantic_class_name {
-            ...
-        }
-        
-        */
-        .span_1 {
-            @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_2, .nav_item {
+        /* 2 */
+        .nav_item {
             @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);
         }
-        .span_3 {
-            @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_4, .header, .article_list, .footer {
-            @include span_first;
+        /* 4 */
+        .header, .article_list, .footer {
             width:100%;
         }
-
-
-
+        
+        
         /* --- Custom styles ---*/ 
         .spacer {
             display: none;
@@ -124,46 +98,18 @@ $accent3: #FF226B;
     
 	@media screen and (min-width: 600px) and (max-width: 1019px) {
         
-        .col {
-            margin-left:0%;
-            padding:0 1%;
-        }
-        
         /* --- Gridpak variables ---*/ 
         $max_columns: 6;
-        $padding: 0 1%;
-        $gutter_px: 0;
-        $gutter_pc: 0%;
-        
-
-        
-        .row .col:first-child {
-            @include span_first;
-        }
         
         
-        .span_1, .nav_item {
+        .nav_item {
             @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
         }
-        .span_2 {
-            @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_3 {
-            @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_4 {
-            @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_5 {
-            @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_6, .header, .footer, .article_list {
-            @include span_first;
+        .header, .footer, .article_list {
             width:100%;
         }
-
-
-
+        
+        
         /* --- Custom styles ---*/ 
         .spacer {
             display: none;
@@ -187,52 +133,18 @@ $accent3: #FF226B;
     
 	@media screen and (min-width: 1020px) {
         
-        .col {
-            margin-left:0%;
-            padding:0 1%;
-        }
-        
         /* --- Gridpak variables ---*/ 
         $max_columns: 8;
-        $padding: 0 1%;
-        $gutter_px: 0;
-        $gutter_pc: 0%;
-        
-
-        
-        .row .col:first-child {
-            @include span_first;
-        }
         
         
-        .span_1, .spacer, .nav_item {
+        .spacer, .nav_item {
             @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
         }
-        .span_2 {
-            @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_3 {
-            @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_4 {
-            @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_5 {
-            @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_6, .header, .article_list, .footer {
+        .header, .article_list, .footer {
             @include span(6, $gutter_pc, $gutter_px, $padding, $max_columns);
         }
-        .span_7 {
-            @include span(7, $gutter_pc, $gutter_px, $padding, $max_columns);
-        }
-        .span_8 {
-            @include span_first;
-            width:100%;
-        }
-
-
-
+        
+        
         /* --- Custom styles ---*/ 
         article {
             position: relative;
@@ -285,7 +197,7 @@ $accent3: #FF226B;
     }
 
 
-/* --- SCAFFOLDING ---*/ 
+/* --- MORE SCAFFOLDING ---*/ 
 
     .row {
         width: 100%;

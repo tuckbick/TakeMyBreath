@@ -8,7 +8,10 @@
   box-sizing: border-box;
   -moz-background-clip: padding-box !important;
   -webkit-background-clip: padding-box !important;
-  background-clip: padding-box !important; }
+  background-clip: padding-box !important;
+  border-left-width: 0;
+  padding: 0 1%;
+  margin-left: 0%; }
 
 /* 1. 4 Column Grid 0px - 599px 
 ----------------------------------------------------------------------------- 
@@ -20,43 +23,13 @@ Span 4:    100%
 
 ----------------------------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 599px) {
-  .col {
-    margin-left: 0%;
-    padding: 0 1%; }
-
   /* --- Gridpak variables ---*/
-  .row .col:first-child {
-    margin-left: 0; }
+  /* 2 */
+  .nav_item {
+    width: 50%; }
 
-  /*
-  Add your semantic classnames in alongside their corresponding spans here. e.g.
-  
-  .span_3,
-  .my_semantic_class_name {
-      ...
-  }
-  
-  */
-  .span_1 {
-    width: 25%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_2, .nav_item {
-    width: 50%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_3 {
-    width: 75%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_4, .header, .article_list, .footer {
-    margin-left: 0;
+  /* 4 */
+  .header, .article_list, .footer {
     width: 100%; }
 
   /* --- Custom styles ---*/
@@ -83,46 +56,11 @@ Span 6:    100%
 
 ----------------------------------------------------------------------------- */
 @media screen and (min-width: 600px) and (max-width: 1019px) {
-  .col {
-    margin-left: 0%;
-    padding: 0 1%; }
-
   /* --- Gridpak variables ---*/
-  .row .col:first-child {
-    margin-left: 0; }
+  .nav_item {
+    width: 16.667%; }
 
-  .span_1, .nav_item {
-    width: 16.667%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_2 {
-    width: 33.333%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_3 {
-    width: 50%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_4 {
-    width: 66.667%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_5 {
-    width: 83.333%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_6, .header, .footer, .article_list {
-    margin-left: 0;
+  .header, .footer, .article_list {
     width: 100%; }
 
   /* --- Custom styles ---*/
@@ -142,59 +80,12 @@ Span 8:    100%
 
 ----------------------------------------------------------------------------- */
 @media screen and (min-width: 1020px) {
-  .col {
-    margin-left: 0%;
-    padding: 0 1%; }
-
   /* --- Gridpak variables ---*/
-  .row .col:first-child {
-    margin-left: 0; }
+  .spacer, .nav_item {
+    width: 12.5%; }
 
-  .span_1, .spacer, .nav_item {
-    width: 12.5%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_2 {
-    width: 25%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_3 {
-    width: 37.5%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_4 {
-    width: 50%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_5 {
-    width: 62.5%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_6, .header, .article_list, .footer {
-    width: 75%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_7 {
-    width: 87.5%;
-    border-left-width: 0;
-    padding: 0 1%;
-    margin-left: 0%; }
-
-  .span_8 {
-    margin-left: 0;
-    width: 100%; }
+  .header, .article_list, .footer {
+    width: 75%; }
 
   /* --- Custom styles ---*/
   article {
@@ -230,7 +121,7 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, div, time {
   padding: 0;
   line-height: 1em; }
 
-/* --- SCAFFOLDING ---*/
+/* --- MORE SCAFFOLDING ---*/
 .row {
   width: 100%;
   *zoom: 1; }
