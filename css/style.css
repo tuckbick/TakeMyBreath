@@ -141,7 +141,8 @@ a {
   text-decoration: none; }
 
 .header {
-  font-weight: 900; }
+  font-weight: 900;
+  text-align: center; }
 
 h1 a, h2 a {
   color: inherit; }
