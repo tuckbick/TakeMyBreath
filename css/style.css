@@ -1,0 +1,381 @@
+/* colors: http://www.colourlovers.com/pattern/2268759/very_secret_garden */
+/* Reusable column setup */
+.col {
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+}
+
+/* 1. 4 Column Grid 0px - 599px 
+----------------------------------------------------------------------------- 
+
+Span 1:    25.0%
+Span 2:    50.0%
+Span 3:    75.0%
+Span 4:    100%
+
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 599px) {
+  .col {
+    margin-left: 0%;
+    padding: 0 1%;
+  }
+
+  /* --- Gridpak variables ---*/
+  .row .col:first-child {
+    margin-left: 0;
+  }
+
+  /*
+  Add your semantic classnames in alongside their corresponding spans here. e.g.
+  
+  .span_3,
+  .my_semantic_class_name {
+      ...
+  }
+  
+  */
+  .span_1 {
+    width: 25%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_2, .nav_item {
+    width: 50%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_3 {
+    width: 75%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_4, .header, .article_list, .footer {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* --- Custom styles ---*/
+  .spacer {
+    display: none;
+  }
+
+  .header {
+    font-size: 6rem;
+  }
+
+  .nav .nav_item {
+    font-size: 1.5rem;
+    border-top: 0.25em solid #ff226b;
+  }
+  .nav li:nth-child(2n) .nav_item {
+    border-left: 1px solid #ff226b;
+  }
+}
+/* 2. 6 Column Grid 600px - 1019px 
+----------------------------------------------------------------------------- 
+
+Span 1:    16.6666666667%
+Span 2:    33.3333333333%
+Span 3:    50.0%
+Span 4:    66.6666666667%
+Span 5:    83.3333333333%
+Span 6:    100%
+
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 600px) and (max-width: 1019px) {
+  .col {
+    margin-left: 0%;
+    padding: 0 1%;
+  }
+
+  /* --- Gridpak variables ---*/
+  .row .col:first-child {
+    margin-left: 0;
+  }
+
+  .span_1, .nav_item {
+    width: 16.667%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_2 {
+    width: 33.333%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_3 {
+    width: 50%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_4 {
+    width: 66.667%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_5 {
+    width: 83.333%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_6, .header, .footer, .article_list {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* --- Custom styles ---*/
+  .spacer {
+    display: none;
+  }
+}
+/* 3. 8 Column Grid 1020px - Infinity 
+----------------------------------------------------------------------------- 
+
+Span 1:    12.5%
+Span 2:    25.0%
+Span 3:    37.5%
+Span 4:    50.0%
+Span 5:    62.5%
+Span 6:    75.0%
+Span 7:    87.5%
+Span 8:    100%
+
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 1020px) {
+  .col {
+    margin-left: 0%;
+    padding: 0 1%;
+  }
+
+  /* --- Gridpak variables ---*/
+  .row .col:first-child {
+    margin-left: 0;
+  }
+
+  .span_1, .spacer, .nav_item {
+    width: 12.5%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_2 {
+    width: 25%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_3 {
+    width: 37.5%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_4 {
+    width: 50%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_5 {
+    width: 62.5%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_6, .header, .article_list, .footer {
+    width: 75%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_7 {
+    width: 87.5%;
+    border-left-width: 0;
+    padding: 0 1%;
+    margin-left: 0%;
+  }
+
+  .span_8 {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* --- Custom styles ---*/
+  article {
+    position: relative;
+  }
+  article time {
+    font-size: 1.75rem;
+    position: absolute;
+    left: -110px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  article time .day {
+    position: absolute;
+    top: 1em;
+    right: 0;
+  }
+  article time .year {
+    position: absolute;
+    top: 2em;
+    right: -1.6em;
+  }
+}
+/* 4. All
+----------------------------------------------------------------------------- */
+/* --- RESET ---*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, div, time {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+/* --- SCAFFOLDING ---*/
+.row {
+  width: 100%;
+  *zoom: 1;
+}
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+
+/* --- STYLES ---*/
+body {
+  background-color: #fdf7e3;
+  color: #26203a;
+  font-family: 'Exo', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  font-weight: 900;
+}
+
+h1 a, h2 a {
+  color: inherit;
+}
+h1 a:hover, h2 a:hover {
+  color: #910b0b;
+}
+
+.nav {
+  list-style: none;
+  display: block;
+}
+.nav .nav_item {
+  text-align: center;
+  background-color: #26203a;
+  color: #fdf7e3;
+  line-height: 2em;
+}
+.nav .nav_item:hover {
+  background-color: #910b0b;
+  color: #fac960;
+}
+
+.article_list {
+  padding-top: 4rem;
+}
+.article_list article {
+  margin-bottom: 4rem;
+}
+.article_list article .title {
+  font-size: 2.5rem;
+}
+.article_list article time {
+  display: block;
+  font-style: italic;
+}
+.article_list article .content {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  line-height: 1.4em;
+}
+.article_list article .content a {
+  color: #910b0b;
+  border-bottom: 1px dashed #910b0b;
+}
+.article_list article .content a:hover {
+  color: #fac960;
+  background-color: #910b0b;
+  border-color: #fac960;
+}
+
+footer {
+  border-top: 0.5rem solid #ff226b;
+  background-color: #26203a;
+}
+footer .footer {
+  color: #fdf7e3;
+  font-size: 1.5rem;
+  padding: 2em 1em;
+}
+
+/* 5. 0px - 1019px 
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 1019px) {
+  article time {
+    font-size: 1.5rem;
+    margin-top: 0.5em;
+  }
+}
+/* 6. 600px - Infinity 
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 600px) {
+  /* 600 - infinity */
+  .header {
+    font-size: 10rem;
+  }
+
+  .nav_item {
+    border-top: 0.25em solid #ff226b;
+    font-size: 2rem;
+  }
+}

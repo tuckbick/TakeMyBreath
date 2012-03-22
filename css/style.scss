@@ -1,0 +1,421 @@
+/* colors: http://www.colourlovers.com/pattern/2268759/very_secret_garden */
+$bg: #FDF7E3;
+$dark: #26203A;
+$accent1: #FAC960;
+$accent2: #910B0B;
+$accent3: #FF226B;
+
+
+
+/* Reusable column setup */
+
+@mixin col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+.col {
+   @include col;
+}
+
+@mixin span($num, $gutter_pc, $gutter_px, $padding, $max_columns) {
+    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
+    width:($one_col * $num) + ($gutter_pc * ($num - 1));
+    border-left-width:$gutter_px;
+    padding:$padding;
+    margin-left:$gutter_pc;
+}
+
+@mixin span_first {
+    margin-left:0;
+}
+ 
+
+    /* 1. 4 Column Grid 0px - 599px 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    25.0%
+    Span 2:    50.0%
+    Span 3:    75.0%
+    Span 4:    100%
+    
+    ----------------------------------------------------------------------------- */	
+    
+	@media screen and (min-width: 0px) and (max-width: 599px) {
+        
+        .col {
+            margin-left:0%;
+            padding:0 1%;
+        }
+        
+        /* --- Gridpak variables ---*/ 
+        $max_columns: 4;
+        $padding: 0 1%;
+        $gutter_px: 0;
+        $gutter_pc: 0%;
+        
+
+        
+        .row .col:first-child {
+            @include span_first;
+        }
+        
+        
+        /*
+        Add your semantic classnames in alongside their corresponding spans here. e.g.
+        
+        .span_3,
+        .my_semantic_class_name {
+            ...
+        }
+        
+        */
+        .span_1 {
+            @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_2, .nav_item {
+            @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_3 {
+            @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_4, .header, .article_list, .footer {
+            @include span_first;
+            width:100%;
+        }
+
+
+
+        /* --- Custom styles ---*/ 
+        .spacer {
+            display: none;
+        }
+        .header {
+            font-size: 6rem;
+        }
+        .nav {
+            .nav_item {
+                font-size: 1.5rem;
+                border-top: 0.25em solid $accent3;
+            }
+            & li:nth-child(2n) .nav_item {
+                border-left: 1px solid $accent3;
+            };
+        }
+    }
+
+    /* 2. 6 Column Grid 600px - 1019px 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    16.6666666667%
+    Span 2:    33.3333333333%
+    Span 3:    50.0%
+    Span 4:    66.6666666667%
+    Span 5:    83.3333333333%
+    Span 6:    100%
+    
+    ----------------------------------------------------------------------------- */	
+    
+	@media screen and (min-width: 600px) and (max-width: 1019px) {
+        
+        .col {
+            margin-left:0%;
+            padding:0 1%;
+        }
+        
+        /* --- Gridpak variables ---*/ 
+        $max_columns: 6;
+        $padding: 0 1%;
+        $gutter_px: 0;
+        $gutter_pc: 0%;
+        
+
+        
+        .row .col:first-child {
+            @include span_first;
+        }
+        
+        
+        .span_1, .nav_item {
+            @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_2 {
+            @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_3 {
+            @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_4 {
+            @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_5 {
+            @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_6, .header, .footer, .article_list {
+            @include span_first;
+            width:100%;
+        }
+
+
+
+        /* --- Custom styles ---*/ 
+        .spacer {
+            display: none;
+        }
+
+    }
+
+    /* 3. 8 Column Grid 1020px - Infinity 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    12.5%
+    Span 2:    25.0%
+    Span 3:    37.5%
+    Span 4:    50.0%
+    Span 5:    62.5%
+    Span 6:    75.0%
+    Span 7:    87.5%
+    Span 8:    100%
+    
+    ----------------------------------------------------------------------------- */	
+    
+	@media screen and (min-width: 1020px) {
+        
+        .col {
+            margin-left:0%;
+            padding:0 1%;
+        }
+        
+        /* --- Gridpak variables ---*/ 
+        $max_columns: 8;
+        $padding: 0 1%;
+        $gutter_px: 0;
+        $gutter_pc: 0%;
+        
+
+        
+        .row .col:first-child {
+            @include span_first;
+        }
+        
+        
+        .span_1, .spacer, .nav_item {
+            @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_2 {
+            @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_3 {
+            @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_4 {
+            @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_5 {
+            @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_6, .header, .article_list, .footer {
+            @include span(6, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_7 {
+            @include span(7, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .span_8 {
+            @include span_first;
+            width:100%;
+        }
+
+
+
+        /* --- Custom styles ---*/ 
+        article {
+            position: relative;
+
+            time {
+                font-size: 1.75rem;
+                position: absolute;
+                left: -110px;
+                -webkit-transform: rotate(-45deg);   
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+
+                .day {
+                    position: absolute;
+                    top: 1em;
+                    right: 0;
+                }
+                .year {
+                    position: absolute;
+                    top: 2em;
+                    right: -1.6em;
+                }
+            }
+        }
+
+
+    }
+
+
+
+/* 4. All
+----------------------------------------------------------------------------- */
+
+
+/* --- RESET ---*/ 
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    ul, ol, li, h1, h2, h3, h4, h5, h6, div, time {
+        margin: 0;
+        padding: 0;
+        line-height: 1em;
+    }
+
+
+/* --- SCAFFOLDING ---*/ 
+
+    .row {
+        width: 100%;
+        *zoom: 1;
+
+        &:before, &:after {
+            content: "";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+    }
+
+
+
+/* --- STYLES ---*/
+
+    body {
+        background-color: $bg;
+        color: $dark;
+        font-family: 'Exo', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .header {
+        font-weight: 900;
+    }
+
+    h1 a, h2 a{
+        color: inherit;
+
+        &:hover {
+            color: $accent2;
+        }
+    }
+
+    .nav {
+        list-style:none;
+        display: block;
+
+        .nav_item {
+            text-align: center;
+            background-color: $dark;
+            color: $bg;
+            line-height: 2em;
+
+            &:hover {
+                background-color: $accent2;
+                color: $accent1;
+            }
+        }
+    }
+
+    .article_list {
+        padding-top: 4rem;
+
+        article {
+            margin-bottom: 4rem;
+
+            .title {
+                font-size: 2.5rem;
+            }
+            time {
+                display: block;
+                font-style: italic;
+            }
+            .content {
+                margin-top: 1em;
+                font-size: 1.5rem;
+                line-height: 1.4em;
+
+                a {
+                    color: $accent2;
+                    border-bottom: 1px dashed $accent2;
+
+                    &:hover {
+                        color: $accent1;
+                        background-color: $accent2;
+                        border-color: $accent1;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        border-top: 0.5rem solid $accent3;
+        background-color: $dark;
+
+        .footer {
+            color: $bg;
+            font-size: 1.5rem;
+            padding: 2em 1em;
+        }
+    }
+
+
+
+
+/* 5. 0px - 1019px 
+----------------------------------------------------------------------------- */
+
+@media screen and (min-width: 0px) and (max-width: 1019px) {
+
+    article time {
+        font-size: 1.5rem;
+        margin-top: 0.5em;
+    }
+
+}
+
+
+
+
+/* 6. 600px - Infinity 
+----------------------------------------------------------------------------- */
+
+@media screen and (min-width: 600px) {
+
+    /* 600 - infinity */
+    .header {
+        font-size: 10rem;
+    }
+    .nav_item {
+        border-top: 0.25em solid $accent3;
+        font-size: 2rem;
+    }
+
+}
