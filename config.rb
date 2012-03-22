@@ -10,6 +10,7 @@ javascripts_dir = "js"
 # output_style = :expanded or :nested or :compact or :compressed
 #output_style = :compressed
 #output_style = :compact
+output_style = :nested
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
